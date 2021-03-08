@@ -81,7 +81,7 @@
                                     class="icon-edit-pen"></span></a>
                             <a class="icon-active-desktop" href="#"><span class="icon-delete"></span></a>
                             <label class="plus-detail-checkbox">
-                                <input type="checkbox"></input>
+                                <input type="checkbox" onclick="myFunction()"></input>
                                 <span class="icon-minus checked"></span>
                                 <span class="icon-plus unchecked"></span>
                             </label>
@@ -129,7 +129,7 @@
                         <p class="vypujcka-stav stav-nevraceno uppercase">Nevráceno</p>
                         <div class="vypujcka-container-icon">
                             <label class="plus-detail-checkbox">
-                                <input type="checkbox"></input>
+                                <input type="checkbox" onclick="myFunction2()"></input>
                                 <span class="icon-minus checked"></span>
                                 <span class="icon-plus unchecked"></span>
                             </label>
@@ -174,7 +174,7 @@
                         <p class="vypujcka-stav stav-vraceno uppercase">Vráceno</p>
                         <div class="vypujcka-container-icon">
                             <label class="plus-detail-checkbox">
-                                <input type="checkbox"></input>
+                                <input type="checkbox" onclick="myFunction3()"></input>
                                 <span class="icon-minus checked"></span>
                                 <span class="icon-plus unchecked"></span>
                             </label>
@@ -225,6 +225,33 @@
             </div>
         </footer>
     </div>
+    <script>
+        let prvky = document.getElementsByClassName("vypujcka-item")
+        function myFunction(){
+            if (prvky[0].getElementsByClassName("detail-vypujcky-container")[0].style.display === "block"){
+                    prvky[0].getElementsByClassName("detail-vypujcky-container")[0].style.display = "none"
+            }
+            else{
+                prvky[0].getElementsByClassName("detail-vypujcky-container")[0].style.display = "block"
+            }
+        }
+        function myFunction2(){
+            if (prvky[1].getElementsByClassName("detail-vypujcky-container")[0].style.display === "block"){
+                    prvky[1].getElementsByClassName("detail-vypujcky-container")[0].style.display = "none"
+            }
+            else{
+                prvky[1].getElementsByClassName("detail-vypujcky-container")[0].style.display = "block"
+            }
+        }
+        function myFunction3(){
+            if (prvky[2].getElementsByClassName("detail-vypujcky-container")[0].style.display === "block"){
+                    prvky[2].getElementsByClassName("detail-vypujcky-container")[0].style.display = "none"
+            }
+            else{
+                prvky[2].getElementsByClassName("detail-vypujcky-container")[0].style.display = "block"
+            }
+        }
+    </script>
 </body>
 
 </html>
